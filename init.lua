@@ -31,6 +31,7 @@ local config = {
   -- colorscheme = "tokyonight",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
+
   options = {
     opt = {
       relativenumber = true, -- sets vim.opt.relativenumber
@@ -209,7 +210,7 @@ local config = {
         "Shatur/neovim-ayu",
         config = function()
           require("ayu").setup {
-            mirage = true, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
+            mirage = false, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
           }
         end,
       },
@@ -262,6 +263,15 @@ local config = {
       end
       return config -- return final config table to use in require("null-ls").setup(config)
     end,
+
+    ["bufferline"] = {
+      highlights = {
+        buffer_selected = {
+          fg = "#272727",
+          bg = "#3D5871",
+        },
+      },
+    },
 
     ["neo-tree"] = {
       event_handlers = {
