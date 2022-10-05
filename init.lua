@@ -35,6 +35,7 @@ local config = {
   options = {
     opt = {
       relativenumber = true, -- sets vim.opt.relativenumber
+      termguicolors = true,
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
@@ -159,7 +160,8 @@ local config = {
       ["<leader>m"] = { ":HopChar2<CR>", desc = "Jump promp" },
       ["<leader>n"] = { ":HopLine<CR>", desc = "Jump line" },
       ["<Tab><Tab>"] = { ":Telescope find_files<CR>", desc = "Find files" },
-
+      ["<leader>v"] = { ":Vista!!<CR>", desc = "Vista" },
+      ["<leader>;"] = { "$a:<Esc>o", desc = "Add ; the end of line" },
       -- second key is the lefthand side of the map mappings seen under group name "Buffer"
       -- ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
       -- ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
@@ -215,6 +217,7 @@ local config = {
         end,
       },
       { "folke/tokyonight.nvim" },
+      { "liuchengxu/vista.vim" },
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
 
@@ -264,14 +267,14 @@ local config = {
       return config -- return final config table to use in require("null-ls").setup(config)
     end,
 
-    ["bufferline"] = {
-      highlights = {
-        buffer_selected = {
-          fg = "#272727",
-          bg = "#3D5871",
-        },
-      },
-    },
+    -- ["bufferline"] = {
+    --   highlights = {
+    --     buffer_selected = {
+    --       fg = "#272727",
+    --       bg = "#3D5871",
+    --     },
+    --   },
+    -- },
 
     ["neo-tree"] = {
       event_handlers = {
