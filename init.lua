@@ -160,6 +160,9 @@ local config = {
       ["<leader>m"] = { ":HopChar1<CR>", desc = "Jump promp" },
       ["<leader>n"] = { ":HopLineStart<CR>", desc = "Jump line" },
       ["<Tab><Tab>"] = { ":Telescope find_files<CR>", desc = "Find files" },
+      ["<Tab>l"] = { ":Telescope live_grep<CR>", desc = "Find word" },
+      ["<Tab>w"] = { ":Telescope grep_string<CR>", desc = "Find string in your under cursor" },
+      ["<Tab>s"] = { ":Telescope current_buffer_fuzzy_find<CR>", desc = "Find string in your current buffer" },
       ["<leader>v"] = { ":Vista!!<CR>", desc = "Vista" },
       ["<leader>;"] = { "$a:<Esc>o", desc = "Add ; the end of line" },
       -- second key is the lefthand side of the map mappings seen under group name "Buffer"
