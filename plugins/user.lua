@@ -30,6 +30,11 @@ return {
     end,
   },
   { "folke/tokyonight.nvim" },
+  {
+    "ellisonleao/gruvbox.nvim",
+    lazy = false,
+    priority = 1000,
+  },
   { "liuchengxu/vista.vim", event = "BufRead",
   },
 }
