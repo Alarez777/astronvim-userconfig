@@ -24,7 +24,8 @@ return {
             mirage = false     -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
         }
     end
-}, { "folke/tokyonight.nvim" }, { "liuchengxu/vista.vim", event = "BufRead" }, {
+}, { "ellisonleao/gruvbox.nvim", lazy = false, priority = 1000 },
+    { "folke/tokyonight.nvim" }, { "liuchengxu/vista.vim", event = "BufRead" }, {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     config = function()
