@@ -17,6 +17,7 @@ return {
       desc = "Jump T",
     },
     ["<leader>m"] = { ":HopChar1<CR>", desc = "Jump promp" },
+    ["<leader>fs"] = { ":Telescope colorscheme<CR>", desc = "Select colorscheme" },
     ["<leader>n"] = { ":HopLineStart<CR>", desc = "Jump line" },
     ["<Tab><Tab>"] = { ":Telescope find_files<CR>", desc = "Find files" },
     ["<Tab>g"] = { ":Telescope live_grep<CR>", desc = "Find word" },
