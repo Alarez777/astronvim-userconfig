@@ -1,4 +1,4 @@
-return {
+-- return {
   -- customize alpha options
   -- {
   --   "goolord/alpha-nvim",
@@ -74,4 +74,5 @@ return {
   --     }, { mode = "n", prefix = "<leader>" })
   --   end,
   -- },
+return {
 }

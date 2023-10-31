@@ -5,7 +5,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
-      ensure_installed = { "lua_ls"},
+      ensure_installed = { "lua_ls" },
     },
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
@@ -19,8 +19,13 @@ return {
   {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
+    -- opts == function(_, opts)
+    --   opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
+    --     "python",
+    --   })
+    -- end,
     opts = {
-      ensure_installed = { "python" },
+      --ensure_installed = { "python" },
     },
   },
 }

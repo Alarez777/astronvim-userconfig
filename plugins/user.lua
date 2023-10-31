@@ -8,7 +8,7 @@ return {
                 -- Configuration here, or leave empty to use defaults
             })
         end
-    }, 
+    },
     {
         "phaazon/hop.nvim",
         event = "BufRead",
@@ -32,5 +32,17 @@ return {
     { "liuchengxu/vista.vim", event = "BufRead" },
     { "folke/tokyonight.nvim" },
     { "ellisonleao/gruvbox.nvim", lazy = false,     priority = 1000 },
-    { "liuchengxu/vista.vim",     event = "BufRead" }
+    { "sainnhe/everforest", lazy = false,     priority = 1000 },
+    { "liuchengxu/vista.vim",     event = "BufRead" },
+    {
+        "Exafunction/codeium.vim",
+        event = "BufEnter",
+        config = function()
+            vim.g.codeium_disable_bindings = 1
+            vim.keymap.set('i', '<Right>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+            vim.keymap.set('i', '<c-Right>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+            vim.keymap.set('i', '<c-Left>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+            vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+        end
+    },
 }
