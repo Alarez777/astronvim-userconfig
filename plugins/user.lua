@@ -8,41 +8,46 @@ return {
                 -- Configuration here, or leave empty to use defaults
             })
         end
-    },
-    {
+    }, {
         "phaazon/hop.nvim",
         event = "BufRead",
-        branch = "v2",     -- optional but strongly recommended
+        branch = "v2", -- optional but strongly recommended
         config = function()
-            require("hop").setup { keys = "etovxqpdygfblzhckisura" }
+            require("hop").setup {keys = "etovxqpdygfblzhckisura"}
         end
-    },
-    {
+    }, {
         "Shatur/neovim-ayu",
         lazy = false,
         priority = 1000,
         config = function()
             require("ayu").setup {
-                mirage = false     -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
+                mirage = false -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
             }
         end
-    },
-    { "ellisonleao/gruvbox.nvim", lazy = false, priority = 1000 },
-    { "folke/tokyonight.nvim" },
-    { "liuchengxu/vista.vim", event = "BufRead" },
-    { "folke/tokyonight.nvim" },
-    { "ellisonleao/gruvbox.nvim", lazy = false,     priority = 1000 },
-    { "sainnhe/everforest", lazy = false,     priority = 1000 },
-    { "liuchengxu/vista.vim",     event = "BufRead" },
-    {
+    }, {"ellisonleao/gruvbox.nvim", lazy = false, priority = 1000},
+    {"folke/tokyonight.nvim"}, {"liuchengxu/vista.vim", event = "BufRead"},
+    {"folke/tokyonight.nvim"},
+    {"ellisonleao/gruvbox.nvim", lazy = false, priority = 1000},
+    {"sainnhe/everforest", lazy = false, priority = 1000},
+    {"liuchengxu/vista.vim", event = "BufRead"}, {
         "Exafunction/codeium.vim",
         event = "BufEnter",
         config = function()
             vim.g.codeium_disable_bindings = 1
-            vim.keymap.set('i', '<Right>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-            vim.keymap.set('i', '<c-Right>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-            vim.keymap.set('i', '<c-Left>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-            vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+            vim.keymap.set('i', '<Right>',
+                           function()
+                return vim.fn['codeium#Accept']()
+            end, {expr = true})
+            vim.keymap.set('i', '<c-Right>', function()
+                return vim.fn['codeium#CycleCompletions'](1)
+            end, {expr = true})
+            vim.keymap.set('i', '<c-Left>', function()
+                return vim.fn['codeium#CycleCompletions'](-1)
+            end, {expr = true})
+            vim.keymap.set('i', '<c-x>',
+                           function()
+                return vim.fn['codeium#Clear']()
+            end, {expr = true})
         end
-    },
+    }, {"HiPhish/rainbow-delimiters.nvim", event = "VeryLazy"}
 }
