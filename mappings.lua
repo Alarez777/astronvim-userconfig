@@ -25,6 +25,7 @@ return {
     ["<Tab>s"] = { ":Telescope current_buffer_fuzzy_find<CR>", desc = "Find string in your current buffer" },
     ["<Tab>h"] = { ":bprevious<CR>", desc = "Cambia al siguiente buffer" },
     ["<Tab>l"] = { ":bnext<CR>", desc = "Cambia al anterior buffer" },
+    ["<Tab>v"] = { ":Vista finder skim<CR><CR>", desc = "Cambia al anterior buffer" },
     ["<leader>v"] = { ":Vista!!<CR>", desc = "Vista" },
     ["<leader>;"] = { "$a:<Esc>o", desc = "Add ; the end of line" },
   },

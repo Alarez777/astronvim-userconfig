@@ -28,7 +28,21 @@ return {
   { "ellisonleao/gruvbox.nvim", lazy = false, priority = 1000 },
   { "folke/tokyonight.nvim" },
   { "sainnhe/everforest", lazy = false, priority = 1000 },
-  { "liuchengxu/vista.vim", event = "VeryLazy" },
+  { "lotabout/skim", lazy = false, priority = 1000 },
+  {
+    "liuchengxu/vista.vim",
+    event = "VeryLazy",
+    requires = { "lotabout/skim" },
+    config = function() vim.g.vista_sidebar_width = 55 end,
+  },
+  -- {
+  --   "simrat39/symbols-outline.nvim",
+  --   event = "VeryLazy",
+  --   -- config = function()
+  --   --   local opts = {}
+  --   --   require("symbols-outline").setup(opts)
+  --   -- end,
+  -- },
   {
     "Exafunction/codeium.vim",
     event = "VeryLazy",
